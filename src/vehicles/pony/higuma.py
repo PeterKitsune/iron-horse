@@ -9,7 +9,7 @@ def main(**kwargs):
         model_id="higuma",
         base_numeric_id=16910,
         name="Higuma",
-        subrole="universal",
+        subrole="express",
         subrole_child_branch_num=-6,
         base_track_type="NG",
         power_by_power_source={

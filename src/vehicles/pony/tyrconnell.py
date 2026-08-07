@@ -9,7 +9,7 @@ def main(**kwargs):
         model_id="tyrconnell",
         base_numeric_id=930,
         name="4-8-0 Tyrconnell",
-        subrole="universal",
+        subrole="express",
         subrole_child_branch_num=-3,
         base_track_type="NG",
         power_by_power_source={

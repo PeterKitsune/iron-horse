@@ -9,7 +9,7 @@ def main(**kwargs):
         model_id="thor",
         base_numeric_id=21330,
         name="0-4-4-0 Thor",
-        subrole="universal",
+        subrole="express",
         subrole_child_branch_num=2,
         base_track_type="NG",
         power_by_power_source={

@@ -517,11 +517,10 @@ def main():
                 # only standard for metro in Pony
             },
             "NG": {
-                # NG standard/suburban/express all *same* in Pony, balanced against trams, RVs
-                # suburban and express have to be provided as some vehicles expect it, just copying it in is easiest solution
-                "standard": [45, 45, 60, 75],
-                "suburban": [45, 45, 60, 75],
-                "express": [45, 45, 60, 75],
+                # NG standard and suburban are much slower than SG, whilst NG express is one gen ahead of SG standard
+                "standard": [25, 35, 45, 60],
+                "suburban": [25, 35, 45, 60],
+                "express": [45, 60, 75, 87],
             },
         },
         # capacity factor per generation, will be multiplied by vehicle length

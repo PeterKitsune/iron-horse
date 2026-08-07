@@ -9,7 +9,7 @@ def main(**kwargs):
         model_id="rockhampton",
         base_numeric_id=21290,
         name="Rockhampton",
-        subrole="universal",
+        subrole="express",
         subrole_child_branch_num=-3,
         base_track_type="NG",
         power_by_power_source={

@@ -9,7 +9,7 @@ def main(**kwargs):
         model_id="gargouille",
         base_numeric_id=21400,
         name="Gargouille",
-        subrole="universal",
+        subrole="express",
         subrole_child_branch_num=2,
         power_by_power_source={
             "DIESEL": 900,
