@@ -202,18 +202,20 @@ engine_module_names = [
     # ng engines
     "cheese_bug",
     "bean_feast",
-    "pikel",
-    "boar_cat",
-    "thor",
     "alfama",
     "gargouille",
     "solano",
     "lebeche",
-    "tyrconnell",
     "nile",
     "hinterland",
+    # ng express engines
+    "thor",
+    "tyrconnell",
     "rockhampton",
     "higuma",
+    # ng gronk engines
+    "pikel",
+    "boar_cat",
     # ng railcars
     "mumble",
     "snapper",
