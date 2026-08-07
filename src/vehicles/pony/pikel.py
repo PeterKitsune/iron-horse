@@ -9,11 +9,15 @@ def main(**kwargs):
         model_id="pikel",
         base_numeric_id=21100,
         name="Pikel",
-        subrole="universal",
+        subrole="gronk",
         subrole_child_branch_num=1,
         power_by_power_source={
             "DIESEL": 600,
         },
+        speed=35,
+        # dibble TE up for game balance, assume low gearing or something
+        tractive_effort_coefficient=0.375,
+        fixed_run_cost_points=100,  # substantial cost bonus so it can make money
         random_reverse=True,
         base_track_type="NG",
         gen=3,
