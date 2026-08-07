@@ -203,7 +203,6 @@ engine_module_names = [
     "cheese_bug",
     "bean_feast",
     "alfama",
-    "gargouille",
     "solano",
     "lebeche",
     "nile",
@@ -211,6 +210,7 @@ engine_module_names = [
     # ng express engines
     "thor",
     "tyrconnell",
+    "gargouille",
     "rockhampton",
     "higuma",
     # ng gronk engines
