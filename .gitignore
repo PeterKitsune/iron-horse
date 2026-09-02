@@ -9,5 +9,8 @@
 dups.txt
 render_timings.txt
 
+/build_logs*
+*_pycache_*
+
 # The local makefile should be ignored:
 Makefile.local
