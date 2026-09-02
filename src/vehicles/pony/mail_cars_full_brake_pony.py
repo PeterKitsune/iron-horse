@@ -20,7 +20,22 @@ def main(**kwargs):
 
     result.append(model_def)
 
-    # no gen 2 for NG, straight to gen 3
+    # no gen 1B NG coach
+    # no gen 2A NG coach
+
+    model_def = ModelDef(
+        schema_name="MailCarVanFullBrake",
+        base_numeric_id=15900,
+        gen=2,
+        subtype="B",
+        base_track_type="NG",
+        livery_group_name="gen_1_ng_mail_liveries",  # override default liveries from gestalt
+        sprites_complete=True,
+    )
+
+    model_def.add_unit_def(unit_cls_name="ExpressMailCarUnit", chassis="4_axle_ng_16px")
+
+    result.append(model_def)
 
     model_def = ModelDef(
         schema_name="MailCarVanFullBrake",
