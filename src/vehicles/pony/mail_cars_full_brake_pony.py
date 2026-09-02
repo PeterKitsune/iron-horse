@@ -25,9 +25,9 @@ def main(**kwargs):
 
     model_def = ModelDef(
         schema_name="MailCarVanFullBrake",
-        base_numeric_id=16385,
+        base_numeric_id=32800,
         gen=2,
-        subtype="B",
+        subtype="A",
         base_track_type="NG",
         livery_group_name="gen_1_ng_mail_liveries",  # override default liveries from gestalt
         sprites_complete=True,
