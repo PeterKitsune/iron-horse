@@ -25,7 +25,7 @@ def main(**kwargs):
 
     model_def = ModelDef(
         schema_name="MailCarVanFullBrake",
-        base_numeric_id=15900,
+        base_numeric_id=16385,
         gen=2,
         subtype="B",
         base_track_type="NG",
@@ -33,7 +33,7 @@ def main(**kwargs):
         sprites_complete=True,
     )
 
-    model_def.add_unit_def(unit_cls_name="ExpressMailCarUnit", chassis="4_axle_ng_16px")
+    model_def.add_unit_def(unit_cls_name="ExpressMailCarUnit", chassis="4_axle_ng_24px")
 
     result.append(model_def)
 
