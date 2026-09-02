@@ -20,10 +20,13 @@ def main(**kwargs):
 
     result.append(model_def)
 
+    # no gen 1B NG coach
+    # no gen 2A NG coach
+
     model_def = ModelDef(
         schema_name="PassengerCar",
         base_numeric_id=23680,
-        gen=1,
+        gen=2,
         subtype="B",
         base_track_type="NG",
         livery_group_name="gen_1_ng_pax_liveries",  # override default liveries from gestalt
@@ -33,8 +36,6 @@ def main(**kwargs):
     model_def.add_unit_def(unit_cls_name="PaxCarUnit", chassis="4_axle_ng_24px")
 
     result.append(model_def)
-
-    # no gen 2 for NG, straight to gen 3
 
     model_def = ModelDef(
         schema_name="PassengerCar",
