@@ -7,8 +7,8 @@ def main(**kwargs):
     # --------------- standard gauge ---------------------------------------------------------------
 
     model_def = ModelDef(
-        schema_name="MineralCoveredHopperCarLimeType2",
-        base_numeric_id=24900,
+        schema_name="MineralCoveredHopperCarSaltType2",
+        base_numeric_id=32800,
         gen=4,
         subtype="A",
         sprites_complete=True,
@@ -21,8 +21,8 @@ def main(**kwargs):
     result.append(model_def)
 
     model_def = ModelDef(
-        schema_name="MineralCoveredHopperCarLimeType2",
-        base_numeric_id=24910,
+        schema_name="MineralCoveredHopperCarSaltType2",
+        base_numeric_id=64990,
         gen=4,
         subtype="B",
         sprites_complete=True,
@@ -35,43 +35,29 @@ def main(**kwargs):
     result.append(model_def)
 
     model_def = ModelDef(
-        schema_name="MineralCoveredHopperCarLimeType2",
-        base_numeric_id=24920,
-        gen=5,
-        subtype="A",
-        sprites_complete=True,
-    )
-
-    model_def.add_unit_def(
-        unit_cls_name="FreightCarUnit", chassis="2_axle_chute_greebled_16px"
-    )
-
-    result.append(model_def)
-
-    model_def = ModelDef(
-        schema_name="MineralCoveredHopperCarLimeType2",
-        base_numeric_id=24930,
+        schema_name="MineralCoveredHopperCarSaltType2",
+        base_numeric_id=27260,
         gen=5,
         subtype="B",
         sprites_complete=True,
     )
 
     model_def.add_unit_def(
-        unit_cls_name="FreightCarUnit", chassis="2_axle_chute_greebled_24px"
+        unit_cls_name="FreightCarUnit", chassis="2_axle_1cc_filled_hopper_24px"
     )
 
     result.append(model_def)
 
     model_def = ModelDef(
-        schema_name="MineralCoveredHopperCarLimeType2",
-        base_numeric_id=22250,
+        schema_name="MineralCoveredHopperCarSaltType2",
+        base_numeric_id=22060,
         gen=5,
         subtype="C",
         sprites_complete=True,
     )
 
     model_def.add_unit_def(
-        unit_cls_name="FreightCarUnit", chassis="4_axle_chute_greebled_32px"
+        unit_cls_name="FreightCarUnit", chassis="4_axle_1cc_filled_hopper_32px"
     )
 
     result.append(model_def)

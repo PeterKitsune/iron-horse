@@ -5774,13 +5774,35 @@ class GasTankCarBase(CarSchemaBase):
         )
 
 
-class GasTankCarPressure(GasTankCarBase):
+class GasTankCarPressureBase(GasTankCarBase):
     """
     Pressure tank cars for gases under pressure at low temperatue, e.g. Chlorine etc.
     """
 
-    model_id_root = "pressure_tank_car"
+    vehicle_family_id = "pressure_tank_car"
     variant_group_id_root = "wagon_group_pressure_tank_cars"
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
+
+class GasTankCarPressureType1(GasTankCarPressureBase):
+    """
+    Pressure tank cars for gases under pressure at low temperatue, e.g. Chlorine etc.
+    """
+
+    model_id_root = "pressure_tank_car_type_1"
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
+
+class GasTankCarPressureType2(GasTankCarPressureBase):
+    """
+    Pressure tank cars for gases under pressure at low temperatue, e.g. Chlorine etc.
+    """
+
+    model_id_root = "pressure_tank_car_type_2"
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -7179,7 +7201,7 @@ class MineralCoveredHopperCombos(RandomisedCarComboMixin, MineralCoveredHopperCa
             random_vehicle_map_type="map_mixed_train_one_car_type_more_common",
             dice_colour=3,
             buy_menu_id_pairs=[
-                ["salt_covered_hopper_car"],
+                ["salt_covered_hopper_car_type_1"],
                 ["lime_covered_hopper_car_type_3", "lime_covered_hopper_car_type_1"],
             ],
             catalogue_entry=self.catalogue_entry,
@@ -7303,23 +7325,23 @@ class MineralCoveredHopperCarSaltBase(MineralCoveredHopperCarBase):
         )
 
 
-class MineralCoveredHopperCarSalt(MineralCoveredHopperCarSaltBase):
+class MineralCoveredHopperCarSaltType1(MineralCoveredHopperCarSaltBase):
     """
     Mineral covered hopper for salt, potash, similar cargos.
     """
 
-    model_id_root = "salt_covered_hopper_car"
+    model_id_root = "salt_covered_hopper_car_type_1"
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
 
-class MineralCoveredHopperCarSaltSwingRoof(MineralCoveredHopperCarSaltBase):
+class MineralCoveredHopperCarSaltType2(MineralCoveredHopperCarSaltBase):
     """
     Mineral covered hopper for salt, potash, similar cargos.
     """
 
-    model_id_root = "salt_swing_roof_hopper_car"
+    model_id_root = "salt_covered_hopper_car_type_2"
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
