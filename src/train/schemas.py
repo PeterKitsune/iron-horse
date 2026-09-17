@@ -5774,13 +5774,35 @@ class GasTankCarBase(CarSchemaBase):
         )
 
 
-class GasTankCarPressure(GasTankCarBase):
+class GasTankCarPressureBase(GasTankCarBase):
     """
     Pressure tank cars for gases under pressure at low temperatue, e.g. Chlorine etc.
     """
 
-    model_id_root = "pressure_tank_car"
+    vehicle_family_id = "pressure_tank_car"
     variant_group_id_root = "wagon_group_pressure_tank_cars"
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
+
+class GasTankCarPressureType1(GasTankCarPressureBase):
+    """
+    Pressure tank cars for gases under pressure at low temperatue, e.g. Chlorine etc.
+    """
+
+    model_id_root = "pressure_tank_car_type_1"
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
+
+class GasTankCarPressureType2(GasTankCarPressureBase):
+    """
+    Pressure tank cars for gases under pressure at low temperatue, e.g. Chlorine etc.
+    """
+
+    model_id_root = "pressure_tank_car_type_2"
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -7179,7 +7201,7 @@ class MineralCoveredHopperCombos(RandomisedCarComboMixin, MineralCoveredHopperCa
             random_vehicle_map_type="map_mixed_train_one_car_type_more_common",
             dice_colour=3,
             buy_menu_id_pairs=[
-                ["salt_covered_hopper_car"],
+                ["salt_covered_hopper_car_type_1"],
                 ["lime_covered_hopper_car_type_3", "lime_covered_hopper_car_type_1"],
             ],
             catalogue_entry=self.catalogue_entry,
@@ -7303,23 +7325,23 @@ class MineralCoveredHopperCarSaltBase(MineralCoveredHopperCarBase):
         )
 
 
-class MineralCoveredHopperCarSalt(MineralCoveredHopperCarSaltBase):
+class MineralCoveredHopperCarSaltType1(MineralCoveredHopperCarSaltBase):
     """
     Mineral covered hopper for salt, potash, similar cargos.
     """
 
-    model_id_root = "salt_covered_hopper_car"
+    model_id_root = "salt_covered_hopper_car_type_1"
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
 
-class MineralCoveredHopperCarSaltSwingRoof(MineralCoveredHopperCarSaltBase):
+class MineralCoveredHopperCarSaltType2(MineralCoveredHopperCarSaltBase):
     """
     Mineral covered hopper for salt, potash, similar cargos.
     """
 
-    model_id_root = "salt_swing_roof_hopper_car"
+    model_id_root = "salt_covered_hopper_car_type_2"
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -8884,7 +8906,9 @@ class TankCarBase(CarSchemaBase):
         # they may also change livery at stations if refitted between certain cargo types <shrug>
         super().__init__(**kwargs)
         self.class_refit_groups = ["liquids_non_food_grade"]
-        self.label_refits_allowed = []
+        self.label_refits_allowed = polar_fox.constants.allowed_refits_by_label[
+            "allowed_tanker_products"
+        ]
         self.label_refits_disallowed = polar_fox.constants.disallowed_refits_by_label[
             "legacy_disallowed_liquid_bulk"
         ]
@@ -9357,7 +9381,7 @@ class TorpedoCar(CarSchemaBase):
         super().__init__(**kwargs)
         # no classes, use explicit labels
         self.class_refit_groups = []
-        self.label_refits_allowed = ["IRON"]
+        self.label_refits_allowed = ["IRON", "STEL"]
         self.label_refits_disallowed = []
         self.default_cargos = ["IRON"]
         self._loading_speed_multiplier = 1.5

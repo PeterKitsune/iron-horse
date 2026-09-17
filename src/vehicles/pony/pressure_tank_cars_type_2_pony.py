@@ -5,65 +5,65 @@ def main(**kwargs):
     result = []
 
     # --------------- standard gauge ---------------------------------------------------------------
-
+    """
     model_def = ModelDef(
-        schema_name="BulkOpenCarScrapMetalType2",
-        base_numeric_id=29360,
+        schema_name="GasTankCarPressureType2",
+        base_numeric_id=64960,
         gen=4,
         subtype="A",
-        sprites_complete=True,
+        sprites_complete=False,
     )
 
     model_def.add_unit_def(unit_cls_name="FreightCarUnit", chassis="2_axle_gapped_16px")
 
     result.append(model_def)
-
+    """
     model_def = ModelDef(
-        schema_name="BulkOpenCarScrapMetalType2",
-        base_numeric_id=29780,
+        schema_name="GasTankCarPressureType2",
+        base_numeric_id=64950,
         gen=4,
         subtype="B",
-        sprites_complete=True,
+        sprites_complete=False,
     )
 
-    model_def.add_unit_def(unit_cls_name="FreightCarUnit", chassis="2_axle_gapped_24px")
+    model_def.add_unit_def(
+        unit_cls_name="FreightCarUnit", chassis="2_axle_gapped_greebled_24px"
+    )
 
     result.append(model_def)
-
+    """
     model_def = ModelDef(
-        schema_name="BulkOpenCarScrapMetalType2",
-        base_numeric_id=28420,
+        schema_name="GasTankCarPressureType2",
+        base_numeric_id=64940,
         gen=4,
         subtype="C",
-        sprites_complete=True,
+        sprites_complete=False,
     )
 
-    model_def.add_unit_def(
-        unit_cls_name="FreightCarUnit", chassis="4_axle_gapped_inset_32px"
-    )
+    model_def.add_unit_def(unit_cls_name="FreightCarUnit", chassis="4_axle_gapped_32px")
 
     result.append(model_def)
 
     model_def = ModelDef(
-        schema_name="BulkOpenCarScrapMetalType2",
-        base_numeric_id=32120,
+        schema_name="GasTankCarPressureType2",
+        base_numeric_id=64930,
         gen=5,
         subtype="A",
-        sprites_complete=True,
+        sprites_complete=False,
     )
 
     model_def.add_unit_def(
-        unit_cls_name="FreightCarUnit", chassis="2_axle_gapped_greebled_16px"
+        unit_cls_name="FreightCarUnit", chassis="2_axle_gapped_greebled_alt_16px"
     )
 
     result.append(model_def)
 
     model_def = ModelDef(
-        schema_name="BulkOpenCarScrapMetalType2",
-        base_numeric_id=32140,
+        schema_name="GasTankCarPressureType2",
+        base_numeric_id=64920,
         gen=5,
         subtype="B",
-        sprites_complete=True,
+        sprites_complete=False,
     )
 
     model_def.add_unit_def(
@@ -73,17 +73,17 @@ def main(**kwargs):
     result.append(model_def)
 
     model_def = ModelDef(
-        schema_name="BulkOpenCarScrapMetalType2",
-        base_numeric_id=32160,
+        schema_name="GasTankCarPressureType2",
+        base_numeric_id=64910,
         gen=5,
         subtype="C",
-        sprites_complete=True,
+        sprites_complete=False,
     )
 
     model_def.add_unit_def(
-        unit_cls_name="FreightCarUnit", chassis="4_axle_gapped_greebled_32px"
+        unit_cls_name="FreightCarUnit", chassis="4_axle_gapped_greebled_alt_32px"
     )
 
     result.append(model_def)
-
+    """
     return result
