@@ -12,7 +12,7 @@ def main(**kwargs):
         gen=1,
         subtype="U",
         base_track_type="NG",
-        speed=35,  # note rare non-standard speed, don't spill molten slag eh?
+        speed=1,  # note rare non-standard speed, don't spill molten slag eh?
         sprites_complete=True,
     )
 

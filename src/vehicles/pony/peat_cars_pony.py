@@ -12,7 +12,7 @@ def main(**kwargs):
         gen=1,
         subtype="U",
         base_track_type="NG",
-        speed=35,  # note rare non-standard speed, bins are slow eh?
+        speed=15,  # note rare non-standard speed, bins are slow eh?
         sprites_complete=True,
     )
 
