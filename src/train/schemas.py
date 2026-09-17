@@ -8906,7 +8906,9 @@ class TankCarBase(CarSchemaBase):
         # they may also change livery at stations if refitted between certain cargo types <shrug>
         super().__init__(**kwargs)
         self.class_refit_groups = ["liquids_non_food_grade"]
-        self.label_refits_allowed = []
+        self.label_refits_allowed = polar_fox.constants.allowed_refits_by_label[
+            "allowed_tanker_products"
+        ]
         self.label_refits_disallowed = polar_fox.constants.disallowed_refits_by_label[
             "legacy_disallowed_liquid_bulk"
         ]
@@ -9379,7 +9381,7 @@ class TorpedoCar(CarSchemaBase):
         super().__init__(**kwargs)
         # no classes, use explicit labels
         self.class_refit_groups = []
-        self.label_refits_allowed = ["IRON"]
+        self.label_refits_allowed = ["IRON", "STEL"]
         self.label_refits_disallowed = []
         self.default_cargos = ["IRON"]
         self._loading_speed_multiplier = 1.5
