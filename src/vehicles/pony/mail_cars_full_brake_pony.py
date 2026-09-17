@@ -25,7 +25,7 @@ def main(**kwargs):
 
     model_def = ModelDef(
         schema_name="MailCarVanFullBrake",
-        base_numeric_id=32800,
+        base_numeric_id=42070,
         gen=2,
         subtype="B",
         base_track_type="NG",
